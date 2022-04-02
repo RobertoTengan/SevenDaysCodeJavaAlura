@@ -25,7 +25,7 @@ public class SevenDaysofCode_1 {
 
         // create a request
         var request = HttpRequest.newBuilder(
-            URI.create("https://imdb-api.com/en/API/Top250Movies/<SUA_KEY>"))
+            URI.create("https://imdb-api.com/en/API/Top250Movies/<apiKey>"))
                 .header("accept", "application/json")
                 .build();
 

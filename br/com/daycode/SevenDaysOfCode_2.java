@@ -25,7 +25,7 @@ public class SevenDaysOfCode_2 {
         // create a client
         var client = HttpClient.newHttpClient();
 
-        String key = "<SUA_KEY>";
+        String key = "<apiKey>";
         // create a request
         var request = HttpRequest.newBuilder(
             URI.create("https://imdb-api.com/en/API/Top250Movies/" + key))
@@ -47,33 +47,33 @@ public class SevenDaysOfCode_2 {
             List<String> urlImages = parseAttribute(movies, 5);
             urlImages.forEach(System.out::println);
             
-            //System.out.println("*** Ids ***");
-            //List<String> ids = parseAttribute(movies, 0);
-            //ids.forEach(System.out::println);
+            System.out.println("*** Ids ***");
+            List<String> ids = parseAttribute(movies, 0);
+            ids.forEach(System.out::println);
             
-            //System.out.println("*** Ranks ***");
-            //List<String> ranks = parseAttribute(movies, 1);
-            //ranks.forEach(System.out::println);
+            System.out.println("*** Ranks ***");
+            List<String> ranks = parseAttribute(movies, 1);
+            ranks.forEach(System.out::println);
             
-            //System.out.println("*** FullTitles ***");
-            //List<String> fullTitles = parseAttribute(movies, 3);
-            //fullTitles.forEach(System.out::println);
+            System.out.println("*** FullTitles ***");
+            List<String> fullTitles = parseAttribute(movies, 3);
+            fullTitles.forEach(System.out::println);
             
-            //System.out.println("*** Years ***");
-            //List<String> years = parseAttribute(movies, 4);
-            //years.forEach(System.out::println);
+            System.out.println("*** Years ***");
+            List<String> years = parseAttribute(movies, 4);
+            years.forEach(System.out::println);
             
-            //System.out.println("*** Crews ***");
-            //List<String> crews = parseAttribute(movies, 6);
-            //crews.forEach(System.out::println);
+            System.out.println("*** Crews ***");
+            List<String> crews = parseAttribute(movies, 6);
+            crews.forEach(System.out::println);
             
-            //System.out.println("*** IMDBRatings ***");
-            //List<String> imdbRatings = parseAttribute(movies, 7);
-            //imdbRatings.forEach(System.out::println);
+            System.out.println("*** IMDBRatings ***");
+            List<String> imdbRatings = parseAttribute(movies, 7);
+            imdbRatings.forEach(System.out::println);
             
-            //System.out.println("*** IMDBRatingCount ***");
-            //List<String> imdbRatingCount = parseAttribute(movies, 8);
-            //imdbRatingCount.forEach(System.out::println);
+            System.out.println("*** IMDBRatingCount ***");
+            List<String> imdbRatingCount = parseAttribute(movies, 8);
+            imdbRatingCount.forEach(System.out::println);
 
         } catch (IOException | InterruptedException ex) {
             Logger.getLogger(SevenDaysOfCode_2.class.getName()).log(Level.SEVERE, null, ex);
